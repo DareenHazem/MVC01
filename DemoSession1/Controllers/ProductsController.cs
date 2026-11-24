@@ -79,5 +79,26 @@ namespace DemoSession1.Controllers
 
         }
 
+        #region Session 02
+
+        //[HttpGet]
+        //public IActionResult Search([FromQuery] int id)
+        //{
+        //    return View();
+        //}
+
+        [HttpGet]
+        public IActionResult Search(ProductFilter Product)
+        {
+            return View();
+        }
+
+        public IActionResult GetId([FromRoute(Name="id")] int code, [FromQuery(Name ="id2")] int code2)
+        {
+            return View();
+        }
+
+        #endregion
+
     }
 }
